@@ -2,9 +2,18 @@
 const themeToggle = document.getElementById('themeToggle');
 const body = document.body;
 
+// 페이지 로드 시 저장된 테마 불러오기
+const currentTheme = localStorage.getItem('theme') || 'dark';
+if (currentTheme === 'light') {
+    body.classList.add('light-mode');
+}
+
 // 테마 토글 이벤트 리스너
 themeToggle.addEventListener('click', () => {
     body.classList.toggle('light-mode');
+    // 테마 상태를 localStorage에 저장
+    const theme = body.classList.contains('light-mode') ? 'light' : 'dark';
+    localStorage.setItem('theme', theme);
 });
 
 // ==================== 모바일 메뉴 토글 ====================
