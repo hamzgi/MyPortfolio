@@ -6,6 +6,7 @@ const body = document.body;
 const currentTheme = localStorage.getItem('theme') || 'dark';
 if (currentTheme === 'light') {
     body.classList.add('light-mode');
+    updateThemeIcon();
 }
 
 // 테마 토글 이벤트 리스너
@@ -14,7 +15,21 @@ themeToggle.addEventListener('click', () => {
     // 테마 상태를 localStorage에 저장
     const theme = body.classList.contains('light-mode') ? 'light' : 'dark';
     localStorage.setItem('theme', theme);
+    // 아이콘 업데이트
+    updateThemeIcon();
 });
+
+// 테마 아이콘 업데이트 함수
+function updateThemeIcon() {
+    const icon = themeToggle.querySelector('i');
+    if (body.classList.contains('light-mode')) {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+    } else {
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+    }
+}
 
 // ==================== 모바일 메뉴 토글 ====================
 const hamburger = document.getElementById('hamburger');
