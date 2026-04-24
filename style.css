@@ -479,6 +479,7 @@ main {
 .stat-label {
     color: var(--text-secondary);
     font-size: 1rem;
+    white-space: nowrap;
 }
 
 /* ==================== Skills Section ==================== */
