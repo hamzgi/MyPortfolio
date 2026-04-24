@@ -398,6 +398,15 @@ main {
     animation: float 4s ease-in-out infinite;
     box-shadow: 0 20px 60px rgba(0, 212, 255, 0.3);
     position: relative;
+    overflow: hidden;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 255, 255, 0.2);
 }
 
 .hero-avatar::before {
