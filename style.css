@@ -20,6 +20,7 @@
   --bg-secondary: var(--light-bg-secondary);
   --text-primary: var(--light-text-primary);
   --text-secondary: var(--light-text-secondary);
+  --hero-title-color: var(--light-text-primary);
   
   /* Spacing */
   --spacing-xs: 0.5rem;
@@ -55,6 +56,7 @@
   --bg-secondary: var(--dark-bg-secondary);
   --text-primary: var(--dark-text-primary);
   --text-secondary: var(--dark-text-secondary);
+  --hero-title-color: #64533a;
 }
 
 /* =============================================
@@ -281,7 +283,7 @@ body {
   font-size: var(--font-size-2xl);
   font-weight: bold;
   margin-bottom: var(--spacing-lg);
-  color: var(--text-primary);
+  color:#64533a;
 }
 
 .section-subtitle {
@@ -356,6 +358,7 @@ footer {
 .hero-content h1 {
   font-size: var(--font-size-2xl);
   margin-bottom: var(--spacing-md);
+  color: var(--hero-title-color);
 }
 
 .hero-content p {
