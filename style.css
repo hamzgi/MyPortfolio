@@ -6,14 +6,14 @@
   /* Light Mode Colors */
   --light-bg-primary: #f6f0d7;
   --light-bg-secondary: #c5d89d;
-  --light-text-primary: #88986d;
-  --light-text-secondary: #9cab84;
+  --light-text-primary: #3d4a25;
+  --light-text-secondary: #5a7029;
   
   /* Dark Mode Colors */
   --dark-bg-primary: #222831;
   --dark-bg-secondary: #393e46;
-  --dark-text-primary: #dfd0b8;
-  --dark-text-secondary: #948979;
+  --dark-text-primary: #E8DCC3;
+  --dark-text-secondary: #C4A575;
   
   /* Mode Active */
   --bg-primary: var(--light-bg-primary);
@@ -134,34 +134,47 @@ body {
   color: var(--text-secondary);
 }
 
-.mode-toggle {
-  width: 50px;
-  height: 28px;
-  background-color: var(--text-secondary);
+/* =============================================
+   FLOATING MODE TOGGLE BUTTON
+   ============================================= */
+
+.floating-toggle {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--text-secondary), var(--text-primary));
   border: none;
-  border-radius: 14px;
+  border-radius: var(--radius-full);
   cursor: pointer;
-  position: relative;
-  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  box-shadow: var(--shadow-lg);
+  transition: all 0.3s ease;
+  z-index: 999;
+  font-size: 0;
 }
 
-.mode-toggle::after {
+.floating-toggle::after {
   content: '☀️';
-  position: absolute;
-  left: 4px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 16px;
+  font-size: 28px;
   transition: all 0.3s ease;
 }
 
-#darkModeToggle:checked ~ .navbar .mode-toggle {
-  background-color: var(--text-secondary);
+#darkModeToggle:checked ~ .floating-toggle::after {
+  content: '🌙';
 }
 
-#darkModeToggle:checked ~ .navbar .mode-toggle::after {
-  content: '🌙';
-  left: 22px;
+.floating-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.floating-toggle:active {
+  transform: scale(0.95);
 }
 
 /* =============================================
