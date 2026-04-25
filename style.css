@@ -336,11 +336,19 @@ footer {
   font-size: 20px;
   transition: all 0.3s ease;
   text-decoration: none;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .icon-button:hover {
   transform: scale(1.1);
   box-shadow: var(--shadow-md);
+}
+
+.icon-button img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
 }
 
 /* =============================================
