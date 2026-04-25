@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio - Contact</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Dark Mode Toggle (Checkbox Hack) -->
+  <input type="checkbox" id="darkModeToggle">
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="navbar-logo">MyPortfolio</a>
+      <ul class="navbar-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="project.html">Project</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+          <label for="darkModeToggle" class="mode-toggle"></label>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container">
+    <h1 class="section-title">연락처</h1>
+    <p class="section-subtitle">저와 연락하고 싶으신 분은 아래 정보를 이용해주세요.</p>
+
+    <!-- Contact Container -->
+    <div class="contact-container">
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <h2 style="margin-bottom: var(--spacing-lg); color: var(--text-primary);">연락처 정보</h2>
+        
+        <div class="contact-info-item">
+          <div class="contact-info-label">이름</div>
+          <div class="contact-info-value">홍길동</div>
+        </div>
+
+        <div class="contact-info-item">
+          <div class="contact-info-label">이메일</div>
+          <a href="mailto:your-email@example.com" class="contact-info-value">your-email@example.com</a>
+        </div>
+
+        <div class="contact-info-item">
+          <div class="contact-info-label">GitHub</div>
+          <a href="https://github.com" target="_blank" class="contact-info-value">github.com/yourprofile</a>
+        </div>
+
+        <div class="contact-info-item">
+          <div class="contact-info-label">Blog</div>
+          <a href="https://tistory.com" target="_blank" class="contact-info-value">yourblog.tistory.com</a>
+        </div>
+
+        <div class="contact-socials">
+          <a href="https://github.com" target="_blank" class="icon-button">🐙</a>
+          <a href="https://linkedin.com" target="_blank" class="icon-button">🔗</a>
+          <a href="mailto:your-email@example.com" class="icon-button">✉️</a>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form">
+        <h2 style="margin-bottom: var(--spacing-lg); color: var(--text-primary);">문의하기</h2>
+        
+        <form>
+          <div class="contact-field">
+            <label for="name">이름</label>
+            <input type="text" id="name" name="name" placeholder="성함을 입력하세요" required>
+          </div>
+
+          <div class="contact-field">
+            <label for="email">이메일</label>
+            <input type="email" id="email" name="email" placeholder="이메일을 입력하세요" required>
+          </div>
+
+          <div class="contact-field">
+            <label for="subject">제목</label>
+            <input type="text" id="subject" name="subject" placeholder="제목을 입력하세요" required>
+          </div>
+
+          <div class="contact-field">
+            <label for="message">메시지</label>
+            <textarea id="message" name="message" placeholder="메시지를 입력하세요" required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%; text-align: center;">제출하기</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-left">© 2026 MyPortfolio</div>
+      <div class="footer-right">
+        <a href="https://github.com" target="_blank" class="icon-button">🐙</a>
+        <a href="https://linkedin.com" target="_blank" class="icon-button">🔗</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
